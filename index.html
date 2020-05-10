@@ -1,0 +1,280 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Hari Umi</title>
+    <style>
+        body {
+            background: url(./background.jpg);
+            background-position: bottom right;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: white;
+        }
+        #cover {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: aliceblue;
+            z-index: 10;
+            margin: 0;
+            padding: 0;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            padding: 13px;
+            border-radius: 10px;
+            border: none;
+            background: lightseagreen;
+            color: white;
+            font-size: 20px;
+        }
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .container h1 {
+            position: absolute;
+            top: 0px;
+            text-align: center;
+            padding: 12px;
+            font-size: 2.2rem;
+            font-style: italic;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(235, 72, 72);
+        }
+        .container p {
+            position: absolute;
+            bottom: 85px;
+            width: 90%;
+            text-align: left;
+            padding: 12px;
+            font-size: 0.6rem;
+            font-style: italic;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: black;
+        }
+        .container .img-pic {
+            position: absolute;
+            width: 7em;
+            border-radius: 20px;
+            visibility: hidden;
+        }
+        .messageCard {
+            position: absolute;
+            bottom: -5px;
+            left: -10px;
+            width: 15em;
+            border-radius: 0 20px 0 0;
+        }
+        .fade-in {
+            opacity: 1;
+            animation-name: fadeInOpacity;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 2s;
+        }
+
+        @keyframes fadeInOpacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .vanish {
+            opacity: 0;
+            animation-name: fadeOutOpacity;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 5s;
+        }
+
+        @keyframes fadeOutOpacity {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .fade-in-pic-1 {
+            opacity: 1;
+            animation-name: fadeInOpacityPic;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 5s;
+        }
+
+        .fade-in-pic-2 {
+            opacity: 1;
+            animation-name: fadeInOpacityPic;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 9s;
+        }
+
+        .fade-in-pic-3 {
+            opacity: 1;
+            animation-name: fadeInOpacityPic;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 13s;
+        }
+
+        .fade-in-pic-4 {
+            opacity: 1;
+            animation-name: fadeInOpacityPic;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 17s;
+        }
+
+        .fade-in-pic-5 {
+            opacity: 1;
+            animation-name: fadeInOpacityPic;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 21s;
+        }
+
+        .fade-in-pic-6 {
+            opacity: 1;
+            animation-name: fadeInOpacityPic;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 24s;
+        }
+
+        @keyframes fadeInOpacityPic {
+            0% {
+                opacity: 0;
+                visibility: visible;
+            }
+            25% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 1;
+            }
+            75% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        .fade-in-pic-last {
+            opacity: 1;
+            visibility: visible!important;
+            animation-name: fadeInOpacityLast;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 28s;
+        }
+
+        .container .img-pic-last {
+            width: 15em;
+            border-radius: 20px;
+            visibility: hidden;
+        }
+
+        @keyframes fadeInOpacityLast {
+            0% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 0.2;
+            }
+            50% {
+                opacity: 0.4;
+            }
+            75% {
+                opacity: 0.7;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="cover">
+        <button onclick="playAudio()" type="button">Start</button>
+    </div>
+    
+    <div class="container">
+        <h1 class="fade-in">Happy Mother's Day</h1>
+        <p>Thank you for all that you do...</p>
+        <img style="left: 85px;" class="img-pic" src="./pic1.jpg">
+        <img style="left: 48%; top: 24%;" class="img-pic" src="./pic2.jpg">
+        <img style="right: 40px; bottom: 35%;" class="img-pic" src="./pic3.jpg">
+        <img style="left: 24%; bottom: 35%;" class="img-pic" src="./pic4.jpg">
+        <img style="left: 40px;top: 24%;" class="img-pic" src="./pic5.jpg">
+        <img style="left: 45%; top: 35%;" class="img-pic" src="./pic6.jpg">
+        <img class="img-pic-last" src="./piclast.jpg">
+    </div>
+    <img class="messageCard" src="./message.jpg">
+
+    <audio id="myAudio" style="position: absolute;bottom: 0;width: 60%;">
+        <source src="KensetsuKi.ogg" type="audio/ogg">
+        <source src="KensetsuKi.mp3" type="audio/mpeg">
+    </audio>
+</body>
+
+    <script>
+
+        var x = document.getElementById("myAudio"); 
+        
+        function playAudio() { 
+            document.getElementById("cover").classList.add("vanish");
+            x.play(); 
+            console.log();
+            
+            setTimeout(() => {
+                document.getElementsByClassName("img-pic")[0].classList.add("fade-in-pic-1");
+                setTimeout(() => {
+                document.getElementsByClassName("img-pic")[1].classList.add("fade-in-pic-2");
+                    setTimeout(() => {
+                    document.getElementsByClassName("img-pic")[2].classList.add("fade-in-pic-3");
+                        setTimeout(() => {
+                        document.getElementsByClassName("img-pic")[3].classList.add("fade-in-pic-4");
+                            setTimeout(() => {
+                            document.getElementsByClassName("img-pic")[4].classList.add("fade-in-pic-5");
+                                setTimeout(() => {
+                                document.getElementsByClassName("img-pic")[5].classList.add("fade-in-pic-6");
+                                    setTimeout(() => {
+                                    document.getElementsByClassName("img-pic-last")[0].classList.add("fade-in-pic-last");
+                                    }, 4000);
+                                }, 3000);
+                            }, 3000);
+                        }, 3000);
+                    }, 3000);
+                }, 3000);
+            }, 3000);
+        
+            
+        } 
+        
+        function pauseAudio() { 
+        x.pause(); 
+        } 
+    </script>
+
+</html>
